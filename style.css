@@ -1,4 +1,5 @@
-.container {
+/*Method ------------------------------- One*/ 
+/* .container {
   background-color: rgb(235, 235, 235);
   display: grid;
   grid-template-rows: 100px 200px 300px 100px;
@@ -32,4 +33,84 @@
 }
 .footer {
   grid-column: 1 / -1;
+} */
+
+/*Method ------------------------------- Two*/ 
+/* .container {
+  background-color: rgb(235, 235, 235);
+  display: grid;
+  grid-template-rows: [header-start]100px [header-end box-start] 200px [box-end main-start] 300px [main-end footer-start] 100px [footer-end];
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end grid-start]) [grid-end];
+  justify-content: space-around;
+  gap: 20px;
+  width: 1000px;
+  margin: 30px auto;
+  color: white;
 }
+.header,
+.small-box-1,
+.small-box-2,
+.small-box-3,
+.sidebar,
+.main,
+.footer {
+  background-color: orangered;
+  padding: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.header {
+  grid-column: col-start / grid-end;
+}
+.sidebar {
+  grid-column: 4 / 5;
+  grid-row: box-start / main-end;
+}
+.main {
+  grid-column: 1/4;
+  grid-row: box-end / footer-start;
+}
+.footer {
+  grid-column: col-start / grid-end;
+} */
+
+/*Method ------------------------------- Three*/ 
+/* .container {
+  background-color: rgb(235, 235, 235);
+  display: grid;
+  grid-template-rows: 100px 200px 300px 100px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "head head head head"
+                        "box box box side"
+                        "main main main side"
+                        "foot foot foot foot";
+  justify-content: space-around;
+  gap: 20px;
+  width: 1000px;
+  margin: 30px auto;
+  color: white;
+}
+.header,
+.small-box-1,
+.small-box-2,
+.small-box-3,
+.sidebar,
+.main,
+.footer {
+  background-color: orangered;
+  padding: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.header {
+  grid-area: head;
+}
+.sidebar {
+  grid-area: side;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: foot;
+} */
